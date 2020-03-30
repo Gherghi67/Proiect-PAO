@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5d5ad04d-78ec-4738-896e-8206a9bb1620" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/card/Card.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/user/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,6 +30,22 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.Main" />
+      <module name="ProiectPAO" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -41,5 +59,23 @@
       <updated>1585331246426</updated>
     </task>
     <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="485" y="82" key="#Main" timestamp="1585335028192">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="485" y="82" key="#Main/0.0.1536.824@0.0.1536.824" timestamp="1585335028192" />
+    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1585599984265">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1585599984265" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1585495036965">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1585495036965" />
+    <state x="209" y="32" key="new project wizard" timestamp="1585495079008">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="209" y="32" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1585495079008" />
   </component>
 </project>
