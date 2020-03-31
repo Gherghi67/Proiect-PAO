@@ -6,7 +6,7 @@ public class AuthService {
 
     private static final String TAG = "AuthService";
 
-    private static AuthService singleInstance;
+    private static AuthService singleInstance = null;
 
     private static final String globalPassword = "12345";
 
@@ -27,24 +27,24 @@ public class AuthService {
     public void registerNewUser(User user) {
         currentUser = user;
 
-        System.out.println("New user registered with name : " + currentUser.getName() + "and CNP: " + currentUser.getCnp());
+        System.out.println(TAG + ": New user registered with name : " + currentUser.getName() + "and CNP: " + currentUser.getCnp());
     }
 
     public void signInUser(User user) {
         if(user.getPassword().equals(globalPassword)) {
             currentUser = user;
 
-            System.out.println("User signed in with name: " + currentUser.getName() + "and CNP: " + currentUser.getCnp());
+            System.out.println(TAG + ": User signed in with name: " + currentUser.getName() + "and CNP: " + currentUser.getCnp());
         }
         else {
-            System.out.println("Invalid password!");
+            System.out.println(TAG + ": Invalid password!");
         }
     }
 
     public void signOutUser() {
         currentUser = null;
 
-        System.out.println("Current user signed out");
+        System.out.println(TAG + ": Current user signed out");
     }
 
     public User getCurrentUser() {
