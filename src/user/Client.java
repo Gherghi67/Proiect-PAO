@@ -21,5 +21,5 @@ public class Client extends User {
     public void setRetired(boolean retired) {
         isRetired = retired;
     }
-    
+
 }
