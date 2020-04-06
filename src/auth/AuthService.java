@@ -1,5 +1,6 @@
 package auth;
 
+import database.ListDatabaseService;
 import user.User;
 
 public class AuthService {
@@ -30,12 +31,20 @@ public class AuthService {
     public void registerNewUser(User user) {
         currentUser = user;
 
+        // adding user to database after registering
+        ListDatabaseService service = ListDatabaseService.getInstance();
+        service.addUserToDatabase(user);
+
         System.out.println(TAG + ": New user registered with name : " + currentUser.getName() + "and CNP: " + currentUser.getCnp());
     }
 
 
-    public void signInUser(User user) {
-        if(user.getPassword().equals(globalPassword)) {
+    public void signInUser(String cnp, String password) {
+        // querring the database
+        ListDatabaseService service = ListDatabaseService.getInstance();
+        User user = service.queryUserFromDatabase(cnp);
+
+        if(user.getPassword().equals(password)) {
             currentUser = user;
 
             System.out.println(TAG + ": User signed in with name: " + currentUser.getName() + "and CNP: " + currentUser.getCnp());
