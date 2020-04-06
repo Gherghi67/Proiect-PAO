@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5d5ad04d-78ec-4738-896e-8206a9bb1620" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/auth/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/auth/AuthService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/DatabaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/DatabaseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/user/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/ListDatabaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/ListDatabaseService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,10 +65,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="485" y="82" key="#Main/0.0.1536.824@0.0.1536.824" timestamp="1585335028192" />
-    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1586189272655">
+    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1586196546356">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1586189272655" />
+    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1586196546356" />
     <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1586188966078">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

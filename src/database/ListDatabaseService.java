@@ -8,9 +8,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class ListDatabaseService {
+public class ListDatabaseService implements DatabaseService {
 
-    private static final String TAG = "DatabaseService";
+    private static final String TAG = "ListDatabaseService";
 
     private static ListDatabaseService singleInstance = null;
 
@@ -33,6 +33,7 @@ public class ListDatabaseService {
     }
 
 
+    @Override
     public void addUserToDatabase(User user) {
         users.add(user);
 
@@ -40,6 +41,7 @@ public class ListDatabaseService {
     }
 
 
+    @Override
     public void deleteUserFromDatabase(String cnp) {
         users.removeIf(user -> user.getCnp().equals(cnp));
 
@@ -47,6 +49,7 @@ public class ListDatabaseService {
     }
 
 
+    @Override
     public User queryUserFromDatabase(String cnp) {
         for(User user : users) {
             if(user.getCnp().equals(cnp)) {
@@ -59,6 +62,7 @@ public class ListDatabaseService {
     }
 
 
+    @Override
     public void addCreditToUser(User user, Credit credit) {
         userCreditMap.put(user, credit);
 
@@ -66,7 +70,19 @@ public class ListDatabaseService {
     }
 
 
+    @Override
     public void deleteCreditFromUser(User user) {
+        if(userCreditMap.remove(user) == null) {
+            System.out.println(TAG + ": Cannot find user");
+        }
+        else {
+            System.out.println(TAG + ": Credit was removed from user with CNP: " + user.getCnp());
+        }
+    }
 
+
+    @Override
+    public Credit queryCredit(User user) {
+        return userCreditMap.get(user);
     }
 }
