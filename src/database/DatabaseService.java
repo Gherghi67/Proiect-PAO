@@ -3,27 +3,12 @@ package database;
 import credit.Credit;
 import user.User;
 
-import java.util.List;
-import java.util.Map;
+public interface DatabaseService {
 
-public class DatabaseService {
-
-    private static final String TAG = "DatabaseService";
-
-    private static DatabaseService singleInstance = null;
-
-    private List<User> users;
-
-    private Map<User, Credit> userCreditMap;
-
-    private DatabaseService() {
-
-    }
-
-    public static DatabaseService getInstance() {
-        if(singleInstance == null) {
-            singleInstance = new DatabaseService();
-        }
-        return singleInstance;
-    }
+    void addUserToDatabase(User user);
+    void deleteUserFromDatabase(String cnp);
+    User queryUserFromDatabase(String cnp);
+    void addCreditToUser(User user, Credit credit);
+    void deleteCreditFromUser(User user);
+    Credit queryCredit(User user);
 }

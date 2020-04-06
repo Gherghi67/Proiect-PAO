@@ -2,7 +2,7 @@ package user;
 
 import card.Card;
 
-public class User {
+public class User implements Comparable<User> {
 
     private String name;
     private String cnp;
@@ -62,5 +62,10 @@ public class User {
 
     public void setCard(Card card) {
         this.card = card;
+    }
+
+    @Override
+    public int compareTo(User user) {
+        return this.cnp.compareTo(user.cnp);
     }
 }
