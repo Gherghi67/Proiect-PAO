@@ -23,3 +23,7 @@
 - Card
 - TransactionService
 - DatabaseService
+
+# Documentatie
+
+In proiect am o clasa Client care deriva din clasa de baza User, o interfata DatabaseService care este implementata de ListDatabaseService (momentan baza de date consta intr-un ArrayList de users si un HashMap de users si credite), clasele servicii AuthService, CreditService, ListDatabaseService si TransactionService (dintre care doar AuthService si CreditService sunt folosite in functia main() ) si clasele model Card si Credit.
