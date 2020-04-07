@@ -34,7 +34,7 @@ public class TransactionService {
             }
             else {
                 user.getCard().setBalance(user.getCard().getBalance() - money);
-                System.out.println(TAG + ": Money left on card: " + user.getCard().getBalance())
+                System.out.println(TAG + ": Money left on card: " + user.getCard().getBalance());
 
                 credit.setRemainingMoneyToPay(credit.getRemainingMoneyToPay() - money);
                 System.out.println(TAG + ": Remaining money to pay: " + credit.getRemainingMoneyToPay());

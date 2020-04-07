@@ -1,6 +1,7 @@
 package credit;
 
 import database.ListDatabaseService;
+import transaction.TransactionService;
 import user.Client;
 import user.User;
 
@@ -16,9 +17,14 @@ public class CreditService {
 
     private static CreditService singleInstance = null;
 
+    private ListDatabaseService database;
+
+    private TransactionService transactionService;
 
     private CreditService() {
+        database = ListDatabaseService.getInstance();
 
+        transactionService = TransactionService.getInstance();
     }
 
 
@@ -31,7 +37,7 @@ public class CreditService {
 
 
     public void askForACredit(Client client, int money, int period) {
-        ListDatabaseService service = ListDatabaseService.getInstance();
+
 
         Credit credit = new Credit();
 
@@ -48,7 +54,7 @@ public class CreditService {
         credit.setMonthlyInstallment((credit.getInterestRate() * money) / period);
         credit.setRemainingMoneyToPay(money);
 
-        service.addCreditToUser(client, credit);
+        database.addCreditToUser(client, credit);
 
         System.out.println(TAG + ": Credit created for client with CNP: " + client.getCnp());
     }
@@ -68,6 +74,31 @@ public class CreditService {
 
 
     public void payInstallment(Client client, int money) {
+        transactionService.makeTransaction(client, money);
+    }
 
+
+    public void askDetailsAboutYourCredit(Client client) {
+        Credit credit = database.queryCredit(client);
+        if(credit != null) {
+            System.out.println(TAG + ": " + credit.toString());
+        }
+        else {
+            System.out.println(TAG + ": Credit was not found");
+        }
+    }
+
+
+    public void askForDelay(int numberOfMonths) {
+        System.out.println(TAG + ": Number of months was extended with: " + numberOfMonths);
+    }
+
+
+    public void askForHelp() {
+        System.out.println(TAG + ": 1. To ask for a credit, call askForCredit() method");
+        System.out.println("2. To ask for interest rate, call askForInterestRate() method");
+        System.out.println("3. To pay the installment, call payInstallment() method");
+        System.out.println("4. To ask details about your credit, call askDetailsAboutYourCredit() method");
+        System.out.println("5. To ask for a delay, call askForDelay() method");
     }
 }

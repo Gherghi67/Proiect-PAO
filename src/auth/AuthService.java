@@ -13,9 +13,10 @@ public class AuthService {
 
     private static User currentUser = null;
 
+    private ListDatabaseService service;
 
     private AuthService() {
-
+        service = ListDatabaseService.getInstance();
     }
 
 
@@ -32,7 +33,6 @@ public class AuthService {
         currentUser = user;
 
         // adding user to database after registering
-        ListDatabaseService service = ListDatabaseService.getInstance();
         service.addUserToDatabase(user);
 
         System.out.println(TAG + ": New user registered with name : " + currentUser.getName() + " and CNP: " + currentUser.getCnp());
@@ -41,7 +41,6 @@ public class AuthService {
 
     public void signInUser(String cnp, String password) {
         // querring the database
-        ListDatabaseService service = ListDatabaseService.getInstance();
         User user = service.queryUserFromDatabase(cnp);
 
         if(user == null) {
