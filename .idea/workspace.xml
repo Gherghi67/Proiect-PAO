@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5d5ad04d-78ec-4738-896e-8206a9bb1620" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/transaction/TransactionService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/auth/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/auth/AuthService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/credit/Credit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/credit/Credit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/credit/CreditService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/credit/CreditService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/ListDatabaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/ListDatabaseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/user/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/user/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transaction/TransactionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transaction/TransactionService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
