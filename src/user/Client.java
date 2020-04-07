@@ -1,9 +1,15 @@
 package user;
 
+import card.Card;
+
 public class Client extends User {
 
     private boolean isMarried;
     private boolean isRetired;
+
+    public Client(String name, String cnp, String password, int age, Card card) {
+        super(name, cnp, password, age, card);
+    }
 
 
     public boolean isMarried() {

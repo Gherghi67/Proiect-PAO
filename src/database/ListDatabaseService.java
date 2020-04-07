@@ -37,7 +37,7 @@ public class ListDatabaseService implements DatabaseService {
     public void addUserToDatabase(User user) {
         users.add(user);
 
-        System.out.println(TAG + ": User added to database with name: " + user.getName() + "and CNP: " + user.getCnp());
+        System.out.println(TAG + ": User added to database with name: " + user.getName() + " and CNP: " + user.getCnp());
     }
 
 
@@ -53,11 +53,11 @@ public class ListDatabaseService implements DatabaseService {
     public User queryUserFromDatabase(String cnp) {
         for(User user : users) {
             if(user.getCnp().equals(cnp)) {
-                System.out.println(TAG + ": User with CNP: " + cnp + "was found");
+                System.out.println(TAG + ": User with CNP: " + cnp + " was found");
                 return user;
             }
         }
-        System.out.println(TAG + ": User with CNP: " + cnp + "was not found");
+        System.out.println(TAG + ": User with CNP: " + cnp + " was not found");
         return null;
     }
 
@@ -83,6 +83,9 @@ public class ListDatabaseService implements DatabaseService {
 
     @Override
     public Credit queryCredit(User user) {
-        return userCreditMap.get(user);
+        if(userCreditMap.containsKey(user)) {
+            return userCreditMap.get(user);
+        }
+        return null;
     }
 }

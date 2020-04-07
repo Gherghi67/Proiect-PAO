@@ -35,7 +35,7 @@ public class AuthService {
         ListDatabaseService service = ListDatabaseService.getInstance();
         service.addUserToDatabase(user);
 
-        System.out.println(TAG + ": New user registered with name : " + currentUser.getName() + "and CNP: " + currentUser.getCnp());
+        System.out.println(TAG + ": New user registered with name : " + currentUser.getName() + " and CNP: " + currentUser.getCnp());
     }
 
 
@@ -44,10 +44,14 @@ public class AuthService {
         ListDatabaseService service = ListDatabaseService.getInstance();
         User user = service.queryUserFromDatabase(cnp);
 
+        if(user == null) {
+            return;
+        }
+
         if(user.getPassword().equals(password)) {
             currentUser = user;
 
-            System.out.println(TAG + ": User signed in with name: " + currentUser.getName() + "and CNP: " + currentUser.getCnp());
+            System.out.println(TAG + ": User signed in with name: " + currentUser.getName() + " and CNP: " + currentUser.getCnp());
         }
         else {
             System.out.println(TAG + ": Invalid password!");

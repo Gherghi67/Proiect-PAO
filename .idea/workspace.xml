@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5d5ad04d-78ec-4738-896e-8206a9bb1620" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/transaction/TransactionService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/auth/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/auth/AuthService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/credit/Credit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/credit/Credit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/credit/CreditService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/credit/CreditService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/ListDatabaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/ListDatabaseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/user/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/user/Client.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,8 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -65,10 +71,26 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="485" y="82" key="#Main/0.0.1536.824@0.0.1536.824" timestamp="1585335028192" />
-    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1586196546356">
+    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1586214494773">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1586196546356" />
+    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1586214494773" />
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1586216952821">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1586216952821" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1586216952821">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1586216952821" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1586216952820">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1586216952820" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1586216952821">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1586216952821" />
     <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1586210668850">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
