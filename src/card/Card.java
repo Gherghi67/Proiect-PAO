@@ -2,6 +2,8 @@ package card;
 
 public class Card {
 
+    private int cardId;
+
     private String cardNumber;
     private String ccv;
 
@@ -11,10 +13,19 @@ public class Card {
 
     }
 
-    public Card(String cardNumber, String ccv, int balance) {
+    public Card(int cardId, String cardNumber, String ccv, int balance) {
+        this.cardId = cardId;
         this.cardNumber = cardNumber;
         this.ccv = ccv;
         this.balance = balance;
+    }
+
+    public int getCardId() {
+        return cardId;
+    }
+
+    public void setCardId(int cardId) {
+        this.cardId = cardId;
     }
 
     public String getCardNumber() {

@@ -2,6 +2,7 @@ package credit;
 
 public class Credit {
 
+    private int creditId;
     private int monthlyInstallment;
     private int interestRate;
     private int remainingMoneyToPay;
@@ -10,10 +11,19 @@ public class Credit {
 
     }
 
-    public Credit(int monthlyInstallment, int interestRate, int remainingMoneyToPay) {
+    public Credit(int creditId, int monthlyInstallment, int interestRate, int remainingMoneyToPay) {
+        this.creditId = creditId;
         this.monthlyInstallment = monthlyInstallment;
         this.interestRate = interestRate;
         this.remainingMoneyToPay = remainingMoneyToPay;
+    }
+
+    public int getCreditId() {
+        return creditId;
+    }
+
+    public void setCreditId(int creditId) {
+        this.creditId = creditId;
     }
 
     public int getMonthlyInstallment() {

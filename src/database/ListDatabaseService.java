@@ -1,5 +1,6 @@
 package database;
 
+import card.Card;
 import credit.Credit;
 import user.User;
 
@@ -15,13 +16,21 @@ public class ListDatabaseService implements DatabaseService {
     private static ListDatabaseService singleInstance = null;
 
     private List<User> users;
+    private List<Card> cards;
+    private List<Credit> credits;
 
     private Map<User, Credit> userCreditMap;
 
+    private ReadWriteService service;
 
     private ListDatabaseService() {
         users = new ArrayList<>();
+        cards = new ArrayList<>();
+        credits = new ArrayList<>();
+
         userCreditMap = new HashMap<>();
+
+        service = ReadWriteService.getInstance();
     }
 
 

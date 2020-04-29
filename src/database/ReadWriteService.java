@@ -11,6 +11,8 @@ import java.util.List;
 
 public class ReadWriteService {
 
+    private static final String TAG = "ReadWriteService";
+
     private static ReadWriteService singleInstance = null;
 
 
@@ -24,6 +26,27 @@ public class ReadWriteService {
             singleInstance = new ReadWriteService();
         }
         return singleInstance;
+    }
+
+
+    private void setField(Object object, Field field, String text) throws Exception {
+        if(text.isEmpty()) {
+            return;
+        }
+        Object value = null;
+        if(String.class.equals(field.getType())) {
+            value = text;
+        }
+        else {
+            String name = Character.toUpperCase(field.getType().getSimpleName().charAt(0)) +
+                    field.getType().getSimpleName().substring(1);
+
+            Class<?> type = Class.forName("java.lang." + name + (int.class.equals(field.getType()) ? "eger" : ""));
+
+            Method method = type.getDeclaredMethod("parse" + name, String.class);
+            value = method.invoke(null, text);
+        }
+        field.set(object, value);
     }
 
 
@@ -49,7 +72,7 @@ public class ReadWriteService {
                     setField(record, fields[i], values[i]);
                 }
             }
-            records.add(record)
+            records.add(record);
         }
         return records;
     }
@@ -78,25 +101,5 @@ public class ReadWriteService {
         }
     }
 
-
-    private void setField(Object object, Field field, String text) throws Exception {
-        if(text.isEmpty()) {
-            return;
-        }
-        Object value = null;
-        if(String.class.equals(field.getType())) {
-            value = text;
-        }
-        else {
-            String name = Character.toUpperCase(field.getType().getSimpleName().charAt(0)) +
-                    field.getType().getSimpleName().substring(1);
-
-            Class<?> type = Class.forName("java.lang." + name + (int.class.equals(field.getType()) ? "eger" : ""));
-
-            Method method = type.getDeclaredMethod("parse" + name, String.class);
-            value = method.invoke(null, text);
-        }
-        field.set(object, value);
-    }
 }
 

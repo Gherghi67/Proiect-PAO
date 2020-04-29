@@ -10,18 +10,18 @@ public class User implements Comparable<User> {
 
     private int age;
 
-    private Card card;
+    private int cardId;
 
     public User() {
 
     }
 
-    public User(String name, String cnp, String password, int age, Card card) {
+    public User(String name, String cnp, String password, int age, int cardId) {
         this.name = name;
         this.cnp = cnp;
         this.password = password;
         this.age = age;
-        this.card = card;
+        this.cardId = cardId;
     }
 
     public String getName() {
@@ -56,12 +56,12 @@ public class User implements Comparable<User> {
         this.age = age;
     }
 
-    public Card getCard() {
-        return card;
+    public int getCardId() {
+        return cardId;
     }
 
-    public void setCard(Card card) {
-        this.card = card;
+    public void setCardId(int cardId) {
+        this.cardId = cardId;
     }
 
     @Override
