@@ -3,9 +3,26 @@
   <component name="ChangeListManager">
     <list default="true" id="5d5ad04d-78ec-4738-896e-8206a9bb1620" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/DatabaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/DatabaseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/cards.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/cards.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/credits.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/credits.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/users.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/users.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/auth/AuthService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProiectPAO/auth/AuthService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/card/Card.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProiectPAO/card/Card.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/credit/Credit.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProiectPAO/credit/Credit.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/credit/CreditService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProiectPAO/credit/CreditService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/database/DatabaseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProiectPAO/database/DatabaseService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/database/ListDatabaseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProiectPAO/database/ListDatabaseService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProiectPAO/main/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/transaction/TransactionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProiectPAO/transaction/TransactionService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/user/Client.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/user/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProiectPAO/user/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/auth/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/auth/AuthService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/credit/CreditService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/credit/CreditService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/database/ListDatabaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/ListDatabaseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/transaction/TransactionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transaction/TransactionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/ReadWriteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/ReadWriteService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/user/Client.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/user/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,34 +84,38 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="485" y="82" key="#Main/0.0.1536.824@0.0.1536.824" timestamp="1585335028192" />
-    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1588206475468">
+    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1588264456561">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1588206475468" />
+    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1588264456561" />
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1588263606980">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1588263606980" />
     <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1586637922042">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1586637922042" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1586223397333">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1588264324478">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1586223397333" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1586223397333">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588264324478" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1588264324478">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1586223397333" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1586223397333">
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1588264324478" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1588264324478">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1586223397333" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1586223397333">
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1588264324478" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1588264324478">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1586223397333" />
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1588219084682">
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1588264324478" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1588257758892">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1588219084682" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1588257758892" />
     <state x="209" y="32" key="new project wizard" timestamp="1586211652852">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

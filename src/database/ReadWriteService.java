@@ -85,7 +85,7 @@ public class ReadWriteService {
         }
 
         try(PrintWriter writer = new PrintWriter(path)) {
-            for(int i = 0; i < fields.length; i++) {
+            for(int i = 0; i < fields.length - 1; i++) {
                 Object value = fields[i].get(record);
                 if(value != null) {
                     writer.print(value);
@@ -109,9 +109,9 @@ public class ReadWriteService {
 
         try(PrintWriter writer = new PrintWriter(path)) {
             for(T record : records) {
-                for(int i = 0; i < fields.length; i++) {
+                for(int i = 0; i < fields.length - 1; i++) {
                     Object value = fields[i].get(record);
-                    if(value != null) {
+                    if (value != null) {
                         writer.print(value);
                     }
                     writer.print(",");

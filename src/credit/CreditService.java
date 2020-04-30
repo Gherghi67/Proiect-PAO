@@ -2,8 +2,9 @@ package credit;
 
 import database.ListDatabaseService;
 import transaction.TransactionService;
-import user.Client;
 import user.User;
+
+import java.util.Random;
 
 public class CreditService {
 
@@ -36,7 +37,7 @@ public class CreditService {
     }
 
 
-    public void askForACredit(Client client, int money, int period) throws Exception {
+    public void askForACredit(User client, int money, int period) throws Exception {
 
 
         Credit credit = new Credit();
@@ -54,13 +55,14 @@ public class CreditService {
         credit.setMonthlyInstallment((credit.getInterestRate() * money) / period);
         credit.setRemainingMoneyToPay(money);
 
+
         database.addCreditToUser(client, credit);
 
         System.out.println(TAG + ": Credit created for client with CNP: " + client.getCnp());
     }
 
 
-    public void askForInterestRate(Client client) {
+    public void askForInterestRate(User client) {
         if(client.isRetired()) {
             System.out.println(TAG + ": Interest rate is: " + RETIRED_INTEREST_RATE);
         }
@@ -73,12 +75,12 @@ public class CreditService {
     }
 
 
-    public void payInstallment(Client client, int money) {
+    public void payInstallment(User client, int money) throws Exception {
         transactionService.makeTransaction(client, money);
     }
 
 
-    public void askDetailsAboutYourCredit(Client client) {
+    public void askDetailsAboutYourCredit(User client) {
         Credit credit = database.queryCredit(client);
         if(credit != null) {
             System.out.println(TAG + ": " + credit.toString());

@@ -15,13 +15,13 @@ public class AuthService {
 
     private ListDatabaseService service;
 
-    private AuthService() {
+    private AuthService() throws Exception {
         service = ListDatabaseService.getInstance();
     }
 
 
     // method that returns the singleton instance
-    public static AuthService getInstance() {
+    public static AuthService getInstance() throws Exception {
         if(singleInstance == null) {
             singleInstance = new AuthService();
         }
@@ -29,7 +29,7 @@ public class AuthService {
     }
 
 
-    public void registerNewUser(User user) {
+    public void registerNewUser(User user) throws Exception {
         currentUser = user;
 
         // adding user to database after registering
