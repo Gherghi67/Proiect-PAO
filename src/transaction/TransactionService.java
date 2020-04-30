@@ -1,5 +1,6 @@
 package transaction;
 
+import card.Card;
 import credit.Credit;
 import database.ListDatabaseService;
 import user.User;
@@ -24,17 +25,18 @@ public class TransactionService {
     }
 
 
-    public void makeTransaction(User user, int money) {
+    public void makeTransaction(User user, int money) throws Exception {
         ListDatabaseService service = ListDatabaseService.getInstance();
 
         Credit credit = service.queryCredit(user);
+        Card card = service.queryCard(user);
         if(credit != null) {
-            if(user.getCard().getBalance() < money) {
+            if(card.getBalance() < money) {
                 System.out.println(TAG + ": Insufficient founds");
             }
             else {
-                user.getCard().setBalance(user.getCard().getBalance() - money);
-                System.out.println(TAG + ": Money left on card: " + user.getCard().getBalance());
+                service.modifyCardBalance(user, money);
+                System.out.println(TAG + ": Money left on card: " + (card.getBalance() - money));
 
                 credit.setRemainingMoneyToPay(credit.getRemainingMoneyToPay() - money);
                 System.out.println(TAG + ": Remaining money to pay: " + credit.getRemainingMoneyToPay());

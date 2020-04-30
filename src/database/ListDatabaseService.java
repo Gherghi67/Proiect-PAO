@@ -96,8 +96,8 @@ public class ListDatabaseService implements DatabaseService {
 
         for(User userr : users) {
             if(userr.getCnp().equals(user.getCnp())) {
-                creditId = user.getCreditId();
-                user.setCreditId(0);
+                creditId = userr.getCreditId();
+                userr.setCreditId(0);
             }
         }
 
@@ -130,12 +130,32 @@ public class ListDatabaseService implements DatabaseService {
 
 
     @Override
+    public void modifyCardBalance(User user, int money) throws Exception {
+        int cardId = 0;
+
+        for(User userr : users) {
+            if(userr.getCnp().equals(user.getCnp())) {
+                cardId = userr.getCardId();
+            }
+        }
+
+        for(Card card : cards) {
+            if(card.getCardId() == cardId) {
+                card.setBalance(card.getBalance() - money);
+            }
+        }
+
+        service.write(cards, "data/cards.csv");
+    }
+
+
+    @Override
     public Card queryCard(User user) {
         int cardId = 0;
 
         for(User userr : users) {
             if(userr.getCnp().equals(user.getCnp())) {
-                cardId = user.getCardId();
+                cardId = userr.getCardId();
             }
         }
 

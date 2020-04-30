@@ -12,6 +12,6 @@ public interface DatabaseService {
     void addCreditToUser(User user, Credit credit) throws Exception;
     void deleteCreditFromUser(User user) throws Exception;
     Credit queryCredit(User user);
-    void modifyCardBalance(User user, int money);
+    void modifyCardBalance(User user, int money) throws Exception;
     Card queryCard(User user);
 }
