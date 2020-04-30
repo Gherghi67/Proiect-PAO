@@ -23,18 +23,18 @@ public class ListDatabaseService implements DatabaseService {
 
     private ReadWriteService service;
 
-    private ListDatabaseService() {
-        users = new ArrayList<>();
-        cards = new ArrayList<>();
-        credits = new ArrayList<>();
+    private ListDatabaseService() throws Exception {
+        service = ReadWriteService.getInstance();
+
+        users = service.read("data/users.csv", User.class);
+        cards = service.read("data/cards.csv", Card.class);
+        credits = service.read("data/credits.csv", Credit.class);
 
         userCreditMap = new HashMap<>();
-
-        service = ReadWriteService.getInstance();
     }
 
 
-    public static ListDatabaseService getInstance() {
+    public static ListDatabaseService getInstance() throws Exception {
         if(singleInstance == null) {
             singleInstance = new ListDatabaseService();
         }
@@ -43,16 +43,20 @@ public class ListDatabaseService implements DatabaseService {
 
 
     @Override
-    public void addUserToDatabase(User user) {
+    public void addUserToDatabase(User user) throws Exception {
         users.add(user);
+
+        service.write(user, "data/users.csv");
 
         System.out.println(TAG + ": User added to database with name: " + user.getName() + " and CNP: " + user.getCnp());
     }
 
 
     @Override
-    public void deleteUserFromDatabase(String cnp) {
+    public void deleteUserFromDatabase(String cnp) throws Exception {
         users.removeIf(user -> user.getCnp().equals(cnp));
+
+        service.write(users, "data/user.csv");
 
         System.out.println(TAG + ": User deleted from database with CNP: " + cnp);
     }
@@ -72,28 +76,73 @@ public class ListDatabaseService implements DatabaseService {
 
 
     @Override
-    public void addCreditToUser(User user, Credit credit) {
-        userCreditMap.put(user, credit);
+    public void addCreditToUser(User user, Credit credit) throws Exception {
+        for(User userr : users) {
+            if(userr.getCnp().equals(user.getCnp())) {
+                userr.setCreditId(credit.getCreditId());
+            }
+        }
+
+        service.write(users, "data/users.csv");
+        service.write(credit, "data/credits.csv");
 
         System.out.println(TAG + ": Credit added to user with CNP: " + user.getCnp());
     }
 
 
     @Override
-    public void deleteCreditFromUser(User user) {
-        if(userCreditMap.remove(user) == null) {
-            System.out.println(TAG + ": Cannot find user");
+    public void deleteCreditFromUser(User user) throws Exception {
+        int creditId = 0;
+
+        for(User userr : users) {
+            if(userr.getCnp().equals(user.getCnp())) {
+                creditId = user.getCreditId();
+                user.setCreditId(0);
+            }
         }
-        else {
-            System.out.println(TAG + ": Credit was removed from user with CNP: " + user.getCnp());
-        }
+
+        service.write(users, "data/users.csv");
+
+        int finalCreditId = creditId;
+        credits.removeIf(credit -> credit.getCreditId() == finalCreditId);
+
+        service.write(credits, "data/credits.csv");
     }
 
 
     @Override
     public Credit queryCredit(User user) {
-        if(userCreditMap.containsKey(user)) {
-            return userCreditMap.get(user);
+        int creditId = 0;
+
+        for(User userr : users) {
+            if(userr.getCnp().equals(user.getCnp())) {
+                creditId = user.getCreditId();
+            }
+        }
+
+        for(Credit credit : credits) {
+            if(credit.getCreditId() == creditId) {
+                return credit;
+            }
+        }
+        return null;
+    }
+
+
+    @Override
+    public Card queryCard(User user) {
+        int cardId = 0;
+
+        for(User userr : users) {
+            if(userr.getCnp().equals(user.getCnp())) {
+                cardId = user.getCardId();
+            }
+        }
+
+        for(Card card : cards) {
+            if(card.getCardId() == cardId) {
+                return card;
+            }
         }
         return null;
     }

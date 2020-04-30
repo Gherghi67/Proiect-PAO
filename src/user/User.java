@@ -9,8 +9,8 @@ public class User implements Comparable<User> {
     private String password;
 
     private int age;
-
     private int cardId;
+    private int creditId;
 
     public User() {
 
@@ -62,6 +62,14 @@ public class User implements Comparable<User> {
 
     public void setCardId(int cardId) {
         this.cardId = cardId;
+    }
+
+    public int getCreditId() {
+        return creditId;
+    }
+
+    public void setCreditId(int creditId) {
+        this.creditId = creditId;
     }
 
     @Override

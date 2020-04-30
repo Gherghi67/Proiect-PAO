@@ -21,14 +21,14 @@ public class CreditService {
 
     private TransactionService transactionService;
 
-    private CreditService() {
+    private CreditService() throws Exception {
         database = ListDatabaseService.getInstance();
 
         transactionService = TransactionService.getInstance();
     }
 
 
-    public static CreditService getInstance() {
+    public static CreditService getInstance() throws Exception {
         if(singleInstance == null) {
             singleInstance = new CreditService();
         }
@@ -36,7 +36,7 @@ public class CreditService {
     }
 
 
-    public void askForACredit(Client client, int money, int period) {
+    public void askForACredit(Client client, int money, int period) throws Exception {
 
 
         Credit credit = new Credit();

@@ -7,7 +7,6 @@ public class Client extends User {
     private boolean isMarried;
     private boolean isRetired;
 
-    private int creditId;
 
     public Client(String name, String cnp, String password, int age, int cardId) {
         super(name, cnp, password, age, cardId);
@@ -30,11 +29,4 @@ public class Client extends User {
         isRetired = retired;
     }
 
-    public int getCreditId() {
-        return creditId;
-    }
-
-    public void setCreditId(int creditId) {
-        this.creditId = creditId;
-    }
 }

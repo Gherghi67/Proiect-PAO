@@ -78,6 +78,29 @@ public class ReadWriteService {
     }
 
 
+    public <T> void write(T record, String path) throws Exception {
+        Field[] fields = record.getClass().getDeclaredFields();
+        for(Field field : fields) {
+            field.setAccessible(true);
+        }
+
+        try(PrintWriter writer = new PrintWriter(path)) {
+            for(int i = 0; i < fields.length; i++) {
+                Object value = fields[i].get(record);
+                if(value != null) {
+                    writer.print(value);
+                }
+                writer.print(",");
+            }
+            Object value = fields[fields.length - 1].get(record);
+            if(value != null) {
+                writer.println(value);
+            }
+        }
+    }
+
+
+    // overloaded function
     public <T> void write(List<T> records, String path) throws Exception {
         Field[] fields = records.get(0).getClass().getDeclaredFields();
         for(Field field : fields) {
